@@ -1,0 +1,15 @@
+### Local Tests
+
+### Get all contacts - Local
+GET http://localhost:8080/contacts
+
+### Get contact by ID - Local (replace with a valid ID)
+GET http://localhost:8080/contacts/YOUR_CONTACT_ID_HERE
+
+### Render Tests (after deployment)
+
+### Get all contacts - Render (replace with your Render URL)
+GET https://your-render-app-name.onrender.com/contacts
+
+### Get contact by ID - Render (replace with a valid ID and your Render URL)
+GET https://your-render-app-name.onrender.com/contacts/YOUR_CONTACT_ID_HERE
