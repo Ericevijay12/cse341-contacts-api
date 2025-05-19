@@ -1,4 +1,3 @@
-// controllers/contacts.js
 const { ObjectId } = require('mongodb');
 const { getDb } = require('../db/connection');
 
