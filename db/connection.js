@@ -1,4 +1,3 @@
-// db/connection.js
 const { MongoClient } = require('mongodb');
 require('dotenv').config();
 
@@ -9,10 +8,13 @@ const initDb = async (callback) => {
     console.log('Database already initialized');
     return callback(null, _db);
   }
-  
+
   try {
     const client = await MongoClient.connect(process.env.MONGODB_URI);
-    _db = client.db();
+    
+    // ✅ Explicitly select the correct database name
+    _db = client.db('cse341');
+
     console.log('Connected to MongoDB');
     callback(null, _db);
   } catch (err) {
